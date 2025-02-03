@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Camera Preview -->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/camera_preview"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentTop="true"
+        tools:ignore="MissingClass" />
+
+    <!-- Capture Button -->
+    <Button
+        android:id="@+id/capture_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Capture"
+        android:layout_below="@id/camera_preview"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <!-- Extracted Equation Text -->
+    <TextView
+        android:id="@+id/extracted_equation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Extracted Equation: "
+        android:layout_below="@id/capture_button"
+        android:layout_marginTop="16dp" />
+
+    <!-- Solution View (MathJax or MathView) -->
+    <WebView
+        android:id="@+id/solution_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/extracted_equation"
+        android:layout_marginTop="16dp" />
+
+    <!-- Voice Explanation Button -->
+    <Button
+        android:id="@+id/voice_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Listen to Solution"
+        android:layout_below="@id/solution_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+</RelativeLayout>
