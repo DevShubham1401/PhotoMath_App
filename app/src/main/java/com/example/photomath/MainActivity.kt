@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
     private val geminiApiService: GeminiApiService by lazy {
         Retrofit.Builder()
-            .baseUrl("https://generativelanguage.googleapis.com/") // Replace with actual API URL
+            .baseUrl("https://generativelanguage.googleapis.com/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(GeminiApiService::class.java)
