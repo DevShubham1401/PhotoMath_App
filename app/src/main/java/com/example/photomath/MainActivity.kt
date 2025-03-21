@@ -446,7 +446,6 @@
                     Log.e("TTS", "Initialization failed")
                 }
             }
-
             override fun onDestroy() {
                 super.onDestroy()
                 textToSpeech.stop()
